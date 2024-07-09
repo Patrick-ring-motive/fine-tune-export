@@ -1,0 +1,39 @@
+The difference between saving and investing comes down to risk and potential reward.
+What is Saving?
+Saving is a low-risk way to preserve money for short-term goals and often involves depositing funds into a bank account, certificate of deposit (CD), or money market deposit account. The goal of saving is to preserve the money&#8217;s value, so it&#8217;s readily available when needed without any significant risk of loss. Depending on the type of account, your money could be protected by the Federal Deposit Insurance Corporation (FDIC) or National Credit Union Administration (NCUA) up to certain limits.
+What is Investing?
+Investing requires that you take calculated risks with your money by buying securities, such as stocks, bonds, or mutual funds, with the hope of earning higher, long-term returns. Investments generally do not offer the safety that a savings account does, so your principal can be at risk. In return, you have the potential for a more rewarding gain.
+How Much Can My Money Grow?
+Investing a little money now can go a long way in the future! Use this calculator to find out how much your money can grow.
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+iFrameResize({ log: true }, '#fin-embed-3121');
+});
+} else {
+iFrameResize({ log:false}, '#fin-embed-3121');
+}
+In This Guide
+Investing for Growth
+Why Invest?
+Video
+Savings vs. Investing &#8211; What&#8217;s The Difference?
+Calculator
+Things to Do Before You Invest
+Educational Article
+The Four Main Asset Classes
+Educational Article
+Understanding Investment Funds
+Educational Article
+Determining Your Risk Tolerance
+Educational Article
+Setting the Right Expectations
+Educational Article
+Common Investment Strategies
+Video
+Tax Implications of Investing
+Educational Article
+Up Next
+Things to Do Before You Invest
+Part 3 of 9 in the 
+Investing for Growth Guide
+Continue to the Next Section

@@ -1,0 +1,34 @@
+Calculate your projected college savings amount and compare it to your goal using the calculator below.
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+iFrameResize({ log: true }, '#fin-embed-3058');
+});
+} else {
+iFrameResize({ log:false}, '#fin-embed-3058');
+}
+Tip: Remember, you don’t have to fund your entire college amount with savings. Grants, scholarships, and other financial aid options can help pay for school.
+In This Guide
+Paying for College
+Benefits of Higher Education
+Educational Article
+The Cost of College
+Educational Article
+How Do Families Pay For College?
+Educational Article
+How Much Do I Need to Save For College?
+Calculator
+Saving &#038; Investing for College
+Educational Article
+Education Benefits of Serving
+Video
+How Your Military Benefits Can Help You Pay for College
+Educational Article
+Understanding Financial Aid &#038; Student Loans
+Educational Article
+Top Tips for Student Loans
+Educational Article
+Up Next
+Saving &#038; Investing for College
+Part 5 of 9 in the 
+Paying for College Guide
+Continue to the Next Section

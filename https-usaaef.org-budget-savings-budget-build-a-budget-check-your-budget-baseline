@@ -1,0 +1,28 @@
+If you like to crunch numbers on a calculator, use this for a self-check on your spending and cash flow. If you prefer pencil and paper, we have a worksheet for you in our next section.
+Getting your spending under control and in-line with your income is an essential element to building a healthy financial future. Use this calculator to analyze your spending (including what you pay on a credit card each month) to make sure you are not spending more than you bring in.
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+iFrameResize({ log: true }, '#fin-embed-3101');
+});
+} else {
+iFrameResize({ log:false}, '#fin-embed-3101');
+}
+In This Guide
+Build a Budget
+Why Do I Need a Budget?
+Educational Article
+How Do I Create a Budget?
+Video
+Check Your Budget Baseline
+Calculator
+Build Your Budget
+Worksheet
+Budgeting is a Team Sport
+Worksheet
+Take Command of Your Budget
+Educational Article
+Up Next
+Build Your Budget
+Part 4 of 6 in the 
+Build a Budget Guide
+Continue to the Next Section

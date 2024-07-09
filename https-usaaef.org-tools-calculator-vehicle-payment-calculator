@@ -1,0 +1,9 @@
+Vehicle Payment Calculator 
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+iFrameResize({ log: true }, '#fin-embed-2916');
+});
+} else {
+iFrameResize({ log:false}, '#fin-embed-2916');
+}
+All Calculators

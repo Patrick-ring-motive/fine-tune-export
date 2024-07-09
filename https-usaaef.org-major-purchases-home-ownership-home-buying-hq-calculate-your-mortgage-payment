@@ -1,0 +1,34 @@
+Supercharge your mortgage planning with this helpful calculator.
+Take control of your journey to homeownership by calculating your monthly mortgage payment. Quickly estimate monthly payments with just a few clicks:
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+iFrameResize({ log: true }, '#fin-embed-3113');
+});
+} else {
+iFrameResize({ log:false}, '#fin-embed-3113');
+}
+In This Guide
+Home Buying HQ
+Home Is Where the Heart Is
+Video
+How Much Home Can I Afford?
+Educational Article
+Smart Renting Moves
+Video
+The Home Buying Process
+Video
+How Mortgages Work
+Video
+Mortgage Loan Types
+Video
+Calculate Your Mortgage Payment
+Calculator
+Smart Buying Moves
+Video
+Owning Your Home
+Educational Article
+Up Next
+Smart Buying Moves
+Part 8 of 9 in the 
+Home Buying HQ Guide
+Continue to the Next Section

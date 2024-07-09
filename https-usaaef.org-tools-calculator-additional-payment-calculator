@@ -1,0 +1,11 @@
+Additional Payment Calculator 
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+iFrameResize({ log: true }, '#fin-embed-2956');
+});
+} else {
+iFrameResize({ log:false}, '#fin-embed-2956');
+}
+All Calculators
+Included On:
+Increase Your Monthly Payment

@@ -1,0 +1,9 @@
+Compare Monthly Payment by Term Calculator 
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+iFrameResize({ log: true }, '#fin-embed-3111');
+});
+} else {
+iFrameResize({ log:false}, '#fin-embed-3111');
+}
+All Calculators

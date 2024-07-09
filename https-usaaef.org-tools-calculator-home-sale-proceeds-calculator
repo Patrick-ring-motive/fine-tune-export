@@ -1,0 +1,9 @@
+Home Sale Proceeds Calculator 
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+iFrameResize({ log: true }, '#fin-embed-3120');
+});
+} else {
+iFrameResize({ log:false}, '#fin-embed-3120');
+}
+All Calculators

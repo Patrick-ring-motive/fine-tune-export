@@ -1,0 +1,40 @@
+Take a minute to crunch the numbers and figure out your retirement savings target.
+Predicting the amount of money you will need for retirement can be challenging. Will you still owe money on a mortgage, have a car payment, or want to fund a family member’s college dream? How you answer these questions can dramatically impact the dollars you need to retire.
+One way to estimate the amount of money you will need to retire is to assume you will want to replace a percentage of your current income.
+For example, if you support your current lifestyle with a salary of $75,000 per year, and would like to maintain this standard of living, then you should target approximately $75,000 per year in retirement when adjusted for inflation.
+The money to fund your retirement goal could potentially come from Social Security, a pension, and personal investments you are able to accumulate. Use the calculator provided to estimate how much money you may need to save for retirement.
+Tip: Financial experts suggest saving and/or investing 10% – 15% of your gross income for the future. 
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+iFrameResize({ log: true }, '#fin-embed-3081');
+});
+} else {
+iFrameResize({ log:false}, '#fin-embed-3081');
+}
+In This Guide
+Saving for Retirement
+Why Save for Retirement Now?
+Educational Article
+How Will I Pay For Retirement?
+Video
+How Much Do I Need to Save for Retirement?
+Calculator
+How Should I Save for Retirement?
+Educational Article
+Types of Retirement Accounts
+Educational Article
+Get to Know Traditional vs. Roth IRAs
+Educational Article
+Retirement Accounts: How to Make the Most of Tax Advantages
+Calculator
+Military Retirement Benefits
+Educational Article
+BRS Lump Sum Calculator
+Calculator
+What You Need to Know About the Thrift Savings Plan
+Video
+Up Next
+How Should I Save for Retirement?
+Part 4 of 10 in the 
+Saving for Retirement Guide
+Continue to the Next Section

@@ -1,0 +1,36 @@
+If you are covered under the BRS, you have an option at retirement to reduce your pension in exchange for a lump-sum payment.
+This calculator will help you estimate this payout.
+jQuery(document).ready(function(){
+console.log('ready');
+var iframe= $("#themeframe");
+if(jQuery(window).width() > 750){
+iframe.css({height: '1700px'});
+}
+else if(jQuery(window).width() 
+In This Guide
+Saving for Retirement
+Why Save for Retirement Now?
+Educational Article
+How Will I Pay For Retirement?
+Video
+How Much Do I Need to Save for Retirement?
+Calculator
+How Should I Save for Retirement?
+Educational Article
+Types of Retirement Accounts
+Educational Article
+Get to Know Traditional vs. Roth IRAs
+Educational Article
+Retirement Accounts: How to Make the Most of Tax Advantages
+Calculator
+Military Retirement Benefits
+Educational Article
+BRS Lump Sum Calculator
+Calculator
+What You Need to Know About the Thrift Savings Plan
+Video
+Up Next
+What You Need to Know About the Thrift Savings Plan
+Part 10 of 10 in the 
+Saving for Retirement Guide
+Continue to the Next Section

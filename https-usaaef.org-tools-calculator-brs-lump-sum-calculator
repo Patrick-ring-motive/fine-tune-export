@@ -1,0 +1,11 @@
+BRS Lump Sum Calculator 
+jQuery(document).ready(function(){
+console.log('ready');
+var iframe= $("#themeframe");
+if(jQuery(window).width() > 750){
+iframe.css({height: '1700px'});
+}
+else if(jQuery(window).width() 
+All Calculators
+Included On:
+BRS Lump Sum Calculator

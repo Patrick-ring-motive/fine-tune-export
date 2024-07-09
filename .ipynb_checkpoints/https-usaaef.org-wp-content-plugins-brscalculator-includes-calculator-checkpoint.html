@@ -1,0 +1,265 @@
+I was born in...
+Month
+Month
+January
+February
+March
+April
+May
+June
+July
+August
+September
+October
+November
+December
+Year
+My military retired pay will begin in...
+Month
+Month
+January
+February
+March
+April
+May
+June
+July
+August
+September
+October
+November
+December
+Year
+Year
+When I retire, I will receive approximately...
+$ 
+per month
+calculate
+Start Over
+Results
+Estimated Amount Received Until Age 67
+No Lump Sum
+25% Lump Sum
+50% Lump Sum
+MonthlyRetired Pay
+Lump SumAmount
+$0
+Total Receivedto Age 67
+AmountForfeited
+$0
+*
+Calculation assumes initial monthly pension payments are adjusted annually for inflation. Reduced monthly payments under either lump sum option revert to full pension amounts at your Social Security Full Retirement age (67 for those born in or after 1960).
+Read Disclaimer ∨
+Additional Information:
+The total amount of pension income and the estimate lump sum are rounded to the nearest $100.
+The Lump Sum option election must be made no less than 90 days before receiving your retired pay.
+If you will receive VA disability, you must notify Department of Veterans Affairs and DoD. VA Disability income is not illustrated in the results.
+If you use the DoD BRS Retirement calculator the results shown here may vary slightly. The DOD calculator illustrates results from military retirement to life expectancy.
+The BRS Pension Lump Sum Calculator is an interactive calculator made available for informational purposes only. The calculator provides estimated results and is not intended to be or provide financial, tax, or investment advice. We cannot and do not guarantee applicability or accuracy in regards to your individual circumstances. We encourage you to seek personalized advice from qualified professionals regarding all personal finance issues.
+function roundNearest100(amount){
+return Math.round(amount / 100) * 100;
+}
+function openChart() {
+const retirementAge = 67;
+const retirementAgeMonths = 804
+let getBornMonth = ($('#born_month').val())?parseInt($('#born_month').val()):'';
+let getBornYear = ($('#born_year').val())?parseInt($('#born_year').val()):'';
+let getRetireMonth = ($('#retire_month').val())?parseInt($('#retire_month').val()):'';
+let getRetireYear = ($('#retire_year').val())?parseInt($('#retire_year').val()):'';
+let getExpectedRetirementAmt = ($('#expected_retirement_amt').val())?parseInt($('#expected_retirement_amt').val()):'';
+if(getExpectedRetirementAmt != '' && getBornMonth != '' && getBornYear != '' && getRetireMonth != '' && getRetireYear != '') {
+let ageAtRetirementYears = getRetireYear * 12
+let ageAtRetirementMonths = ageAtRetirementYears + getRetireMonth
+let atBirthYears = getBornYear * 12
+let atBirthMonths = atBirthYears + getBornMonth
+let diffMonths = ageAtRetirementMonths - atBirthMonths;
+let monthsOfRetirement = retirementAgeMonths - diffMonths
+console.log(ageAtRetirementMonths, getBornYear, atBirthYears, atBirthMonths, diffMonths, monthsOfRetirement);
+// Dynamic values for base input
+let n = monthsOfRetirement + 1;
+let d = 0.0051199983247;
+let RP1 = getExpectedRetirementAmt;
+let a = 1 + d;
+let LumpSum = parseFloat(RP1 * (((Math.pow(a,n) - 1)/(d * (Math.pow(a, (n-1))))))).toFixed(2); // RP1 x ((((1 + d)n) - 1)/(d x ((1 + d)n-1))
+let LumpSum25 = parseFloat(LumpSum * 0.25).toFixed(2); // LumpSum25 = LumpSum x 0.25
+let LumpSum50 = parseFloat(LumpSum * 0.5).toFixed(2); // LumpSum50 = LumpSum x 0.5
+console.log('Based on Inputs - Lumpsum', LumpSum, LumpSum25, LumpSum50);
+// ---------------------Step 1----------------------------
+let mo2020 = (12 - getRetireMonth) + 1;
+let p2020 = parseFloat(RP1 * mo2020).toFixed(2);
+console.log('Step1', p2020);
+// --------------------Step 2------------------------------
+const i2021 = 0.023 // constant
+let RP2 = parseFloat(RP1 * (1 + i2021)).toFixed(2);
+const mo2021 = 12;
+let p2021 = parseFloat(RP2 * mo2021).toFixed(2);
+console.log('Step2', p2021);
+// ----------------------Step 3---------------
+const r = 1.0275 // constant
+let p2022 = parseFloat(p2021 * r).toFixed(2);
+let y = (getBornYear + 67) - (getRetireYear + 2); // number of full years between January 2022 and the date the user turns age 67
+if(y = 871){
+//console.log($(window).width() + 150);
+createBarChart(getChartData);
+}
+} else {
+alert("Please complete all required fields and selections.");
+}
+}
+function createBarChart(chartdata) {
+var amountfull = parseInt(chartdata['retirement_amount']);
+var amount25 = parseInt(chartdata['retirement_amount'] - ((chartdata['retirement_amount'] * 25) / 100));
+var amount50 = parseInt(chartdata['retirement_amount'] / 2);
+var data = google.visualization.arrayToDataTable([
+['Element', 'extra', { role: 'annotation' }, { role: 'style' }, 'Density', { role: 'annotation' }, { role: 'style' }],
+[
+"0% Lump Sum\n $"+addCommas(amountfull)+" monthly*",
+0,
+window.screen.width >= 600 ? "$0 lump sum" : "",
+'#013A68',
+chartdata.lump_sum0,
+window.screen.width >= 600 ? '$'+addCommas(roundNearest100(chartdata['lump_sum0']))+'\n total received' : "",
+'#013A68',
+], [
+"25% Lump Sum\n $"+addCommas(amount25)+" monthly*",
+chartdata.earning_lump_sum25,
+window.screen.width >= 600 ? "$"+addCommas(roundNearest100(chartdata['earning_lump_sum25']))+" lump sum" : "",
+'#004450',
+chartdata.lump_sum25 - chartdata.earning_lump_sum25,
+window.screen.width >= 600 ? '$'+addCommas(roundNearest100(chartdata['lump_sum25']))+'\n total received' : "",
+'#00838F',
+], [
+"50% Lump Sum\n $"+addCommas(amount50)+" monthly*",
+chartdata.earning_lump_sum50,
+window.screen.width >= 600 ? "$"+addCommas(roundNearest100(chartdata['earning_lump_sum50']))+" lump sum" : "",
+'#192133',
+chartdata.lump_sum50 - chartdata.earning_lump_sum50,
+window.screen.width >= 600 ? '$'+addCommas(roundNearest100(chartdata['lump_sum50']))+'\n total received' : "",
+'#733D85',
+],
+]);
+$('#green_bar_desc').html("$"+addCommas(roundNearest100(chartdata['lump_sum0']))+" total received$0 lump sum");
+$('#blue_bar_desc').html("$"+addCommas(roundNearest100(chartdata['lump_sum25']))+" total received$"+addCommas(roundNearest100(chartdata['earning_lump_sum25']))+" lump sum");
+$('#orange_bar_desc').html("$"+addCommas(roundNearest100(chartdata['lump_sum50']))+" total received$"+addCommas(roundNearest100(chartdata['earning_lump_sum50']))+" lump sum");
+var view = new google.visualization.DataView(data);
+view.setColumns([0,
+{
+calc: lumpInt,
+type: "number"
+},
+{ calc: "stringify",
+sourceColumn: 2,
+type: "string",
+role: "annotation",
+position: 'bottom' },
+{ calc: "stringify",
+sourceColumn: 3,
+type: "string",
+role: "style" },
+{
+calc: earningLumpInt,
+type: "number"
+},
+{ calc: "stringify",
+sourceColumn: 5,
+type: "string",
+role: "annotation",
+position: 'bottom' },
+{ calc: "stringify",
+sourceColumn: 6,
+type: "string",
+role: "style" }]);
+function lumpInt(dataTable, rowNum){
+var results_from_input= JSON.parse($("#results_json").val());
+if(rowNum == 0){
+return 0;
+}
+else if(rowNum == 1){
+return results_from_input.earning_lump_sum25;
+}
+else if(rowNum == 2){
+return results_from_input.earning_lump_sum50;
+}
+//return dataTable.getValue(rowNum, 1);
+}
+function earningLumpInt(dataTable, rowNum){
+var results_from_input= JSON.parse($("#results_json").val());
+if(rowNum == 0){
+return results_from_input.lump_sum0;
+}
+else if(rowNum == 1){
+return results_from_input.lump_sum25 - results_from_input.earning_lump_sum25;
+}
+else if(rowNum == 2){
+return results_from_input.lump_sum50 - results_from_input.earning_lump_sum50;
+}
+}
+var options = {
+animation:{
+duration: 500,
+easing: 'out',
+startup: true
+},
+backgroundColor: {fill: 'transparent'},
+title: "",
+width: setWidth(),
+height: 400,
+bar: {groupWidth: ($(window).width() + 140) 1 ? '.' + x[1] : '';
+var rgx = /(\d+)(\d{3})/;
+while (rgx.test(x1)) {
+x1 = x1.replace(rgx, '$1' + ',' + '$2');
+}
+return x1 + x2;
+}
+$(document).ready(function() {
+$("#toggle").click(function() {
+var elem = $("#toggle").text();
+if (elem == "Read Disclaimer ∨") {
+//Stuff to do when btn is in the read more state
+$("#toggle").text("Hide Disclaimer ∧");
+$("#text-footer").slideDown();
+} else {
+//Stuff to do when btn is in the read less state
+$("#toggle").text("Read Disclaimer ∨");
+$("#text-footer").slideUp();
+}
+});
+google.charts.load("current", {packages:['corechart']});
+let todayDate = new Date();
+let currentTenYear = todayDate.getFullYear() - 19;
+// Dynamic birthday dropdown
+let selectHtml = 'Year';
+for(let i = (currentTenYear); i >= (currentTenYear - 67); i--) {
+selectHtml += ''+i+'';
+}
+$('#born_year').html(selectHtml);
+// Dynamic retirement dropdown
+let getTotalJoiningYear = parseInt(todayDate.getFullYear()) + 10;
+selectHtml = 'Year';
+for(let j=todayDate.getFullYear(); j'+j+'';
+}
+$('#retire_year').html(selectHtml);
+$('select').select2();
+$(document).on("keyup", "#expected_retirement_amt", function(){
+var input_value= $(this).val();
+var input_regex = new RegExp(/^\d{0,9}(\.\d{0,2})?$/);
+if (!input_regex.test(input_value)) {
+input_value= "";
+}
+if(input_value.split(".").length > 2){
+input_value= input_value.replace(/\.+$/, "");
+}
+$(this).val(input_value);
+});
+$(window).resize(function(){
+$("#chartContainer").html("");
+let getBornMonth = ($('#born_month').val())?parseInt($('#born_month').val()):0;
+let getBornYear = ($('#born_year').val())?parseInt($('#born_year').val()):0;
+let getRetireMonth = ($('#retire_month').val())?parseInt($('#retire_month').val()):0;
+let getRetireYear = ($('#retire_year').val())?parseInt($('#retire_year').val()):0;
+let getExpectedRetirementAmt = ($('#expected_retirement_amt').val())?parseInt($('#expected_retirement_amt').val()):0;
+if(getExpectedRetirementAmt != 0 && getBornMonth != 0 && getBornYear != 0 && getRetireMonth != 0 && getRetireYear != 0) {
+openChart();
+}
+});
+});

@@ -1,0 +1,9 @@
+Mortgage Refinance Calculator 
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+iFrameResize({ log: true }, '#fin-embed-3118');
+});
+} else {
+iFrameResize({ log:false}, '#fin-embed-3118');
+}
+All Calculators

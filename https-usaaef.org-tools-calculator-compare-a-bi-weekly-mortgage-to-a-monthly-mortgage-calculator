@@ -1,0 +1,9 @@
+Compare a Bi-Weekly Mortgage to a Monthly Mortgage Calculator 
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+iFrameResize({ log: true }, '#fin-embed-3119');
+});
+} else {
+iFrameResize({ log:false}, '#fin-embed-3119');
+}
+All Calculators

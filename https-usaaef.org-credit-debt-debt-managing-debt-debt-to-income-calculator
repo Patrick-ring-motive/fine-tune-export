@@ -1,0 +1,33 @@
+Use this calculator to determine your debt-to-income ratio.
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+iFrameResize({ log: true }, '#fin-embed-2955');
+});
+} else {
+iFrameResize({ log:false}, '#fin-embed-2955');
+}
+In This Guide
+Managing Debt
+What is Debt?
+Educational Article
+How Much Debt is too Much?
+Educational Article
+Debt-to-Income Calculator
+Calculator
+Dangers of Debt in the Military
+Educational Article
+How Interest Works on Credit Card Debt
+Educational Article
+Why Pay More Than the Minimum?
+Educational Article
+Increase Your Monthly Payment
+Calculator
+Strategies to Pay Off Debt
+Educational Article
+Should I Consider Credit Counseling?
+Educational Article
+Up Next
+Dangers of Debt in the Military
+Part 4 of 9 in the 
+Managing Debt Guide
+Continue to the Next Section

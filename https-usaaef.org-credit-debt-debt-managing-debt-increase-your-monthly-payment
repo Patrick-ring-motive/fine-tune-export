@@ -1,0 +1,33 @@
+Use this calculator to learn how you can pay your debt down faster.
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+iFrameResize({ log: true }, '#fin-embed-2956');
+});
+} else {
+iFrameResize({ log:false}, '#fin-embed-2956');
+}
+In This Guide
+Managing Debt
+What is Debt?
+Educational Article
+How Much Debt is too Much?
+Educational Article
+Debt-to-Income Calculator
+Calculator
+Dangers of Debt in the Military
+Educational Article
+How Interest Works on Credit Card Debt
+Educational Article
+Why Pay More Than the Minimum?
+Educational Article
+Increase Your Monthly Payment
+Calculator
+Strategies to Pay Off Debt
+Educational Article
+Should I Consider Credit Counseling?
+Educational Article
+Up Next
+Strategies to Pay Off Debt
+Part 8 of 9 in the 
+Managing Debt Guide
+Continue to the Next Section

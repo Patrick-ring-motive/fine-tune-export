@@ -1,0 +1,39 @@
+Let’s take a close look at Traditional vs. Roth retirement account contributions and crunch the numbers for each.
+Depending on which type of retirement account you choose to contribute, the dollars will fall into one of two tax categories: Traditional Contributions or Roth Contributions. The key difference is Traditional contributions can provide tax benefits today, while Roth contributions offer tax-free withdrawals in the future.
+Another potential tax benefit of saving in a retirement account is the Retirement Savings Contributions Credit (Saver&#8217;s Credit). The Saver&#8217;s Credit is a tax credit worth up to $1,000 ($2,000 if married and filing jointly) for low- and mid-income taxpayers who contribute to a retirement account. Visit the IRS website to see if you qualify for the credit.
+Which type of retirement contributions make sense for your situation? Find out now with this calculator. Note that this calculator is not intended to provide tax advice.
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+iFrameResize({ log: true }, '#fin-embed-3082');
+});
+} else {
+iFrameResize({ log:false}, '#fin-embed-3082');
+}
+While this discussion of the tax treatment and tax advantages of different retirement accounts is intended to provide valuable information, it is not a substitute for professional tax advice and you may want to consult with a tax advisor to determine the best options for your situation.
+In This Guide
+Saving for Retirement
+Why Save for Retirement Now?
+Educational Article
+How Will I Pay For Retirement?
+Video
+How Much Do I Need to Save for Retirement?
+Calculator
+How Should I Save for Retirement?
+Educational Article
+Types of Retirement Accounts
+Educational Article
+Get to Know Traditional vs. Roth IRAs
+Educational Article
+Retirement Accounts: How to Make the Most of Tax Advantages
+Calculator
+Military Retirement Benefits
+Educational Article
+BRS Lump Sum Calculator
+Calculator
+What You Need to Know About the Thrift Savings Plan
+Video
+Up Next
+Military Retirement Benefits
+Part 8 of 10 in the 
+Saving for Retirement Guide
+Continue to the Next Section

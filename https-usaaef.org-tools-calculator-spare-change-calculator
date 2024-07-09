@@ -1,0 +1,9 @@
+Spare Change Calculator 
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+iFrameResize({ log: true }, '#fin-embed-3103');
+});
+} else {
+iFrameResize({ log:false}, '#fin-embed-3103');
+}
+All Calculators

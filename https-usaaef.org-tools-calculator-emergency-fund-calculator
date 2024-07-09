@@ -1,0 +1,12 @@
+Emergency Fund Calculator 
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+iFrameResize({ log: true }, '#fin-embed-3106');
+});
+} else {
+iFrameResize({ log:false}, '#fin-embed-3106');
+}
+All Calculators
+Included On:
+Emergency Funds
+How Much Should I Save for Emergencies?
