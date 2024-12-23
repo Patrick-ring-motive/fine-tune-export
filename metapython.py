@@ -40,7 +40,29 @@ def bash(command):
     return sh(f"bash|{command}")
 
 
-
+def importLibLocal(lib):
+  if re.search(r"[^a-zA-Z0-9_\.]", lib):
+    print("Invalid characters in library name.")
+    return None
+  try:
+    module = __import__(lib)
+    print(module)
+    globals()[lib] = module
+    try:
+      inspect.currentframe().f_back.f_globals.update({lib: module})
+    except:
+      pass
+    if hasIPy:
+      get_ipython().user_global_ns[lib] = globals()[lib]
+    print(f"Successfully imported {lib}.")
+    return module
+  except Exception as e:
+    print(f"{lib} not found, {e} attempting to install.")
+    try:
+      c = sh(f"pip install --target {os.getcwd()}/installs {lib}")
+    except Exception as e:
+        print(f"{lib} {e} local install fail.")
+        
 def importLib(lib):
   if re.search(r"[^a-zA-Z0-9_\.]", lib):
     print("Invalid characters in library name.")
